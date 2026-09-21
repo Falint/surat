@@ -1,0 +1,83 @@
+.root {
+    -fx-font-family: "Inter", "Segoe UI", "Noto Sans", sans-serif;
+    -fx-font-size: 13px;
+    -fx-text-fill: #172033;
+}
+
+.app-root { -fx-background-color: #f4f7fb; }
+.top-bar { -fx-background-color: linear-gradient(to right, #163a63, #24598d); }
+.app-logo {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 11;
+    -fx-min-width: 48;
+    -fx-min-height: 48;
+}
+.app-logo-text { -fx-text-fill: #1f4e79; -fx-font-size: 17px; -fx-font-weight: bold; }
+.app-title { -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold; }
+.app-subtitle { -fx-text-fill: #d8e8f7; -fx-font-size: 12px; }
+.form-scroll, .form-scroll > .viewport { -fx-background-color: transparent; }
+.content-wrapper { -fx-max-width: 1120; }
+.section-title { -fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #172033; }
+.section-note { -fx-text-fill: #66758a; }
+.form-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #dce4ee;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(25, 50, 75, 0.07), 15, 0, 0, 4);
+}
+.field-label { -fx-font-weight: bold; -fx-text-fill: #34445a; }
+.text-field, .text-area, .combo-box, .date-picker {
+    -fx-background-color: #f9fbfd;
+    -fx-border-color: #cbd7e5;
+    -fx-border-radius: 7;
+    -fx-background-radius: 7;
+    -fx-min-height: 38;
+}
+.text-area { -fx-min-height: 130; }
+.text-area .content { -fx-background-color: #f9fbfd; -fx-background-radius: 7; }
+.text-field:focused, .text-area:focused, .combo-box:focused, .date-picker:focused {
+    -fx-border-color: #2c70ad;
+    -fx-effect: dropshadow(gaussian, rgba(44, 112, 173, 0.15), 7, 0, 0, 1);
+}
+.input-error { -fx-border-color: #c93d4a; -fx-background-color: #fff7f8; }
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 7;
+    -fx-border-radius: 7;
+    -fx-padding: 10 19;
+    -fx-font-weight: bold;
+}
+.button-primary { -fx-background-color: #1f5d94; -fx-text-fill: white; }
+.button-primary:hover { -fx-background-color: #174b79; }
+.button-outline { -fx-background-color: white; -fx-border-color: #1f5d94; -fx-text-fill: #1f5d94; }
+.button-outline:hover { -fx-background-color: #edf5fc; }
+.button-secondary { -fx-background-color: #e8edf3; -fx-text-fill: #39495d; }
+.button-secondary:hover { -fx-background-color: #d9e1e9; }
+.status-label { -fx-min-height: 20; }
+.status-success { -fx-text-fill: #157347; -fx-font-weight: bold; }
+.status-error { -fx-text-fill: #b02a37; -fx-font-weight: bold; }
+.footer-bar { -fx-background-color: #e9eef5; -fx-border-color: #d7e0ea transparent transparent transparent; }
+.footer-text { -fx-text-fill: #6a788b; -fx-font-size: 11px; }
+
+.preview-scroll, .preview-scroll > .viewport { -fx-background-color: #dce2e8; }
+.preview-page {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 18, 0, 0, 5);
+    -fx-background-insets: 20;
+    -fx-padding: 55 65 65 65;
+}
+.preview-logo { -fx-fill: #1f4e79; }
+.preview-logo-text { -fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold; }
+.letter-divider { -fx-min-height: 3; -fx-max-height: 3; -fx-background-color: #1f4e79; }
+.letter-heading { -fx-font-family: serif; -fx-font-size: 19px; -fx-font-weight: bold; }
+.letter-subheading { -fx-font-family: serif; -fx-font-size: 14px; }
+.letter-caption { -fx-font-family: serif; -fx-font-size: 11px; -fx-text-fill: #556270; }
+.letter-title { -fx-font-family: serif; -fx-font-size: 16px; -fx-font-weight: bold; -fx-underline: true; }
+.letter-center { -fx-font-family: serif; -fx-font-size: 13px; -fx-alignment: center; -fx-max-width: infinity; }
+.letter-right { -fx-font-family: serif; -fx-font-size: 13px; -fx-alignment: center-right; -fx-max-width: infinity; -fx-padding: 10 0 8 0; }
+.letter-body, .letter-body-indent, .letter-key { -fx-font-family: serif; -fx-font-size: 13px; -fx-line-spacing: 3px; }
+.letter-body-indent { -fx-padding: 4 0 4 22; }
+.letter-key { -fx-font-weight: bold; }
+.signature-box { -fx-padding: 8; }
+.signature-name { -fx-font-family: serif; -fx-font-size: 13px; -fx-font-weight: bold; -fx-underline: true; }

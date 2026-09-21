@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="id.gensurat.controller.SuratController" stylesheets="@../css/style.css"
+            styleClass="app-root">
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="14" styleClass="top-bar">
+            <padding><Insets top="18" right="28" bottom="18" left="28"/></padding>
+            <StackPane styleClass="app-logo"><Label text="SG" styleClass="app-logo-text"/></StackPane>
+            <VBox spacing="2">
+                <Label text="Generator Surat Otomatis" styleClass="app-title"/>
+                <Label text="Buat surat resmi dan simpan sebagai PDF — sepenuhnya offline" styleClass="app-subtitle"/>
+            </VBox>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="form-scroll">
+            <VBox spacing="18" styleClass="content-wrapper">
+                <padding><Insets top="26" right="34" bottom="26" left="34"/></padding>
+                <VBox spacing="7">
+                    <Label text="Data surat" styleClass="section-title"/>
+                    <Label text="Isi semua field. Field tambahan akan menyesuaikan jenis surat." styleClass="section-note"/>
+                </VBox>
+
+                <GridPane hgap="18" vgap="13" styleClass="form-card">
+                    <padding><Insets top="22" right="24" bottom="22" left="24"/></padding>
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="145" prefWidth="175"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="220"/>
+                        <ColumnConstraints minWidth="145" prefWidth="175"/>
+                        <ColumnConstraints hgrow="ALWAYS" minWidth="220"/>
+                    </columnConstraints>
+
+                    <Label text="Jenis surat *" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <ComboBox fx:id="jenisSuratCombo" maxWidth="Infinity" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="Nomor surat *" styleClass="field-label" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+                    <TextField fx:id="nomorField" promptText="023/ORG/IX/2026" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+                    <Label text="Tujuan/penerima *" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <TextField fx:id="penerimaField" promptText="Nama atau instansi penerima" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="Perihal *" styleClass="field-label" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+                    <TextField fx:id="perihalField" promptText="Pokok surat" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+                    <Label text="Tanggal *" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <DatePicker fx:id="tanggalPicker" maxWidth="Infinity" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Label text="Tempat *" styleClass="field-label" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+                    <TextField fx:id="tempatField" promptText="Depok" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+
+                    <Label fx:id="detailUtamaLabel" text="Informasi tambahan 1 *" styleClass="field-label" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <TextField fx:id="detailUtamaField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    <Label fx:id="detailKeduaLabel" text="Informasi tambahan 2 *" styleClass="field-label" GridPane.rowIndex="3" GridPane.columnIndex="2"/>
+                    <TextField fx:id="detailKeduaField" GridPane.rowIndex="3" GridPane.columnIndex="3"/>
+
+                    <Label text="Isi/keterangan *" styleClass="field-label" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.valignment="TOP"/>
+                    <TextArea fx:id="isiArea" promptText="Tulis isi utama surat..." wrapText="true" prefRowCount="7"
+                              GridPane.rowIndex="4" GridPane.columnIndex="1" GridPane.columnSpan="3"/>
+
+                    <Label text="Nama penandatangan *" styleClass="field-label" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <TextField fx:id="namaPenandatanganField" promptText="Nama lengkap" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                    <Label text="Jabatan *" styleClass="field-label" GridPane.rowIndex="5" GridPane.columnIndex="2"/>
+                    <TextField fx:id="jabatanPenandatanganField" promptText="Ketua / Kepala / Direktur" GridPane.rowIndex="5" GridPane.columnIndex="3"/>
+                </GridPane>
+
+                <Label fx:id="statusLabel" wrapText="true" styleClass="status-label"/>
+                <HBox alignment="CENTER_RIGHT" spacing="10">
+                    <Button text="Reset" onAction="#resetForm" styleClass="button-secondary"/>
+                    <Button text="Preview" onAction="#preview" styleClass="button-outline"/>
+                    <Button text="Generate PDF" onAction="#generatePdf" defaultButton="true" styleClass="button-primary"/>
+                </HBox>
+            </VBox>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" styleClass="footer-bar">
+            <padding><Insets top="10" right="28" bottom="10" left="28"/></padding>
+            <Label text="Java 21 • JavaFX • Apache PDFBox" styleClass="footer-text"/>
+        </HBox>
+    </bottom>
+</BorderPane>
