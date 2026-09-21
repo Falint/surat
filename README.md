@@ -1,3 +1,4 @@
+# Generator Surat Otomatis
 
 Aplikasi desktop Java untuk membuat surat resmi, melihat preview, dan menyimpannya sebagai PDF A4. Aplikasi berjalan sepenuhnya offline setelah dependency Maven pertama kali terunduh.
 
